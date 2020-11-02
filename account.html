@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Web Store| E-Commerce
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/webstore.jpg" width="125px">
+            </div>
+            <nav id="sideNav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="product.html">PRODUCTS</a></li>
+                    <li><a href="#footer">CONTACT</a></li>
+                    <li><a href="account.html">ACCOUNT</a></li>
+                    <li><a href="cart.html"> <img src="images/cart.png" width="50px" height="50px"></a></li>
+                </ul>
+            </nav>
+
+            <img src="images/menubar.jpg" id="menuBtn">
+
+        </div>
+    </div>
+    <!----account- page--->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/image1.png" width=100%>
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+
+
+                        <form id="Login">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">forgot password</a>
+                        </form>
+
+                        <form id="Register">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------------footer------------------->
+    <section id="footer">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download the App for Android and ios Mobile phone</p>
+                        <div class="app-logo">
+                            <img src="images/p.png"><br>
+                            <img src="images/appstore.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/logo-white.png">
+                        <p>Our purpose is to sustainably make the benefit of store accessible to the many.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful links </h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul class="app">
+                            <li><a href=""><img src="images/bface.jpg"></a>Facebook</li>
+                            <li><a href=""><img src="images/btwit.jpg"></a>Twitter </li>
+                            <li><a href=""><img src="images/binsta.jpg">Instagram </a></li>
+                            <li><a href=""><img src="images/butube.png"></a>YouTube </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyrigth">Copy-Right 2020|Webstore</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        sideNav.style.right = "-250px";
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+            }
+            else {
+                sideNav.style.right = "-250px";
+            }
+        }
+    </script>
+
+    <!-----js for toggle form-->
+    <script>
+        var Login = document.getElementById("Login");
+        var Register = document.getElementById("Register");
+        var indicator = document.getElementById("indicator");
+
+        function register() {
+            Register.style.transform = "translateX(0px)";
+            Login.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+        }
+        function login() {
+            Register.style.transform = "translateX(300px)";
+            Login.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
